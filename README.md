@@ -4,11 +4,8 @@ Realizado por:
  
 <h2 align = "center"> <font color = "darkorange" size = "+6"  font face = "bauhaus 93">  Indice </font> </h2>
 <header> <font color = "red" size="+1" font face = "aharoni">
-                <nav class="navegacion">
-                    <ul class="Indice">
-                       <li> <a href="#Descripción"> Descripción del Problemario </a> <br> </li>
-                            </ul>
-     <li> <a href="#Métodos numéricos para encontrar las raíces de ecuaciones que se encuentran en nuestro repositorio"> Metodos de interpolación </a> <br> </li>
+                <nav class="navegacion">                   
+     <li> <a href="#Descripcion"> Descripción </a> <br> </li>
                             <ul class="subindice"> 
                                 <li> <a href="#Lineal"> Interpolación lineal (5 ejemplos). </a> </li>
                                 <li> <a href="#Cuadratica"> Interpolación cuadratica (1 ejemplo). </a> </li>
@@ -19,8 +16,9 @@ Realizado por:
                 </nav>
             </font> </header>
 
-<a name="Lineal"># Descripción</a>
-En este documento vamos a ver varios ejercicios sobre los distintos metodos de interpolación como lo son:
+<h2 align = "center"> <font font face = "forte">  <a name="Descricpcion"> Descripción </a></h2>
+La interpolación es un método matemático utilizado para estimar valores desconocidos dentro de un rango de valores conocidos. Se basa en la suposición de que la función que describe los datos es continua y suave. La interpolación se utiliza en diversas áreas, como la ingeniería, la ciencia de datos, la física y la estadística, para predecir valores intermedios entre puntos de datos discretos.
+Existen varios métodos de interpolación, cada uno con sus propias características y aplicaciones. Algunos de los más comunes son:
   <li>1.-Interpolación lineal</li>
   <li>2.-Interpolación cuadratica</li>
   <li>3.-Interpolación langrage</li>
