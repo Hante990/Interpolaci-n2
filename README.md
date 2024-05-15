@@ -18,6 +18,7 @@ Realizado por:
 
 <h2 align = "center"> <font font face = "forte">  <a name="Descricpcion"> Descripción </a></h2>
 La interpolación es un método matemático utilizado para estimar valores desconocidos dentro de un rango de valores conocidos. Se basa en la suposición de que la función que describe los datos es continua y suave. La interpolación se utiliza en diversas áreas, como la ingeniería, la ciencia de datos, la física y la estadística, para predecir valores intermedios entre puntos de datos discretos.
+  
 Existen varios métodos de interpolación, cada uno con sus propias características y aplicaciones. Algunos de los más comunes son:
   <li>1.-Interpolación lineal</li>
   <li>2.-Interpolación cuadratica</li>
