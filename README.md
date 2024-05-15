@@ -7,9 +7,6 @@ Realizado por:
                 <nav class="navegacion">
                     <ul class="Indice">
                        <li> <a href="#Descripción del Problemario"> Descripción del Problemario </a> <br> </li>
-                        <li> <a href="#SOBRE LA MATERIA"> Sobre la materia </a> <br> </li>
-                            <ul class="subindice">                   
-                                <li> <a href="#TEMARIO"> Temario </a> </li>  
                             </ul>
      <li> <a href="#Métodos numéricos para encontrar las raíces de ecuaciones que se encuentran en nuestro repositorio"> Metodos de interpolación </a> <br> </li>
                             <ul class="subindice"> 
@@ -30,81 +27,55 @@ En este documento vamos a ver varios ejercicios sobre los distintos metodos de i
   <li>4.-Interpolación de newton</li>
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<h1 align = "center"> <font  font face = "bauhaus 93">  Métodos para enontrar las raíces de una ecuacion </font> </h1>
+<h1 align = "center"> <font  font face = "bauhaus 93">  Métodos de interpolación </font> </h1>
 
-<h2 align = "center"> <font font face = "forte">  1. Bisección </h2>
+<h2 align = "center"> <font font face = "forte">  1. Interpolación lineal </h2>
 
 <h3> <font font face = "arial"> DESCRIPCIÓN: </h3>
 
-El método de bisección es un algoritmo utilizado para encontrar las raíces de una función en un intervalo dado. Consiste en dividir repetidamente el intervalo a la mitad y seleccionar el subintervalo que contiene la raíz. Este proceso se repite hasta que se alcanza la precisión deseada. Los pasos principales son los siguientes:
-
-<h3> <font font face = "arial">Pasos del Método de Bisección:</h3>
-<h5>Inicio del Intervalo:</h5> Se elige un intervalo inicial donde se sospecha que se encuentra la raíz.
-<h5>Cálculo del Punto Medio:</h5> Se calcula el punto medio del intervalo.
-<h5>Evaluación de la Función:</h5> Se evalúa la función en el punto medio para determinar en qué subintervalo se encuentra la raíz.
-<h5>Selección del Nuevo Intervalo:</h5> Se selecciona el nuevo intervalo basado en la evaluación de la función en el punto medio.
-<h5>Iteración:</h5> Se repiten los pasos anteriores hasta que se alcance la precisión deseada, es decir, hasta que el intervalo sea lo suficientemente pequeño.
+La interpolación lineal es un procedimiento numérico que permite aproximar valores desconocidos dentro de un intervalo conocido, asumiendo una relación lineal entre los puntos extremos. Este método es ampliamente utilizado en diversas áreas, como la ingeniería, la física y las matemáticas, para estimar valores intermedios de manera rápida y eficiente.
    
 <h5> <font font face = "arial"> <b> <i> Ejemplo en código. </i> </b> </h5>
 
-  import java.util.Scanner;
+    public class Ejercicio4 {
+    public static double interpolate(double[] x, double[] y, double xTarget) {
+        int n = x.length;
+        double yTarget = 0;
 
-public class Main {  
-    
+        int i = 0;
+        while (i < n - 1 && x[i] < xTarget) {
+            i++;
+        }
+
+        if (i == 0) {
+            yTarget = y[0];
+        } else if (i == n - 1) {
+            yTarget = y[n - 1];
+        } else {
+            double x0 = x[i - 1];
+            double x1 = x[i];
+            double y0 = y[i - 1];
+            double y1 = y[i];
+
+            double m = (y1 - y0) / (x1 - x0);
+            double b = y0 - m * x0;
+            yTarget = m * xTarget + b;
+        }
+
+        return yTarget;
+    }
+
     public static void main(String[] args) {
-      
-        Scanner input = new Scanner(System.in);
-        
-        System.out.print("Ingrese el límite inferior: ");
-        double a = input.nextDouble();
-
-        System.out.print("Ingrese el límite superior: ");
-        double b = input.nextDouble();
-
-        System.out.print("Ingrese el máximo de iteraciones: ");
-        int maxIterations = input.nextInt();
-
-        System.out.print("Ingrese el error permitido: ");
-        double error = input.nextDouble();
-
-        double root = bisection(a, b, maxIterations, error);
-        System.out.println("La raíz de la función es: " + root);
+    double[] x = {0.8, 1.6, 2.8, 3.2, 4.6};
+    double[] y = {1.2, 3.2, 5.2, 7.2, 9.2};
+    double xTarget = 2.0;
+    double yTarget = interpolate(x, y, xTarget);
+    System.out.println("El valor de y para x = " + xTarget + " es " + yTarget);
+     }
     }
 
-    public static double bisection(double a, double b, int maxIterations, double error) {
-        double fa = f(a);
-        double fb = f(b);
+  ![Lineal](https://github.com/Hante990/Interpolaci-n2/assets/107586879/0037a026-e06c-45ce-8827-166931a2d22e)
 
-        if (fa * fb > 0) {
-            System.out.println("No se puede garantizar la existencia de una raíz en el intervalo dado.");
-            return Double.NaN;
-        }
-
-        for (int i = 0; i < maxIterations; i++) {
-            double c = (a + b) / 2;
-            double fc = f(c);
-
-            if (Math.abs(fc) < error) {
-                return c;
-            }
-
-            if (fa * fc < 0) {
-                b = c;
-                fb = fc;
-            } else {
-                a = c;
-                fa = fc;
-            }
-        }
-
-        return (a + b) / 2;
-    }
-
-    public static double f(double x) {
-    
-        return x*x - 4; 
-    }}
-    
 <h2 align = "center"> <font font face = "forte">  2.- Falsa posición </h2>
 
 <h3> <font font face = "arial"> DESCRIPCIÓN: </h3>
