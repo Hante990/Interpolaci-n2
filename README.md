@@ -6,20 +6,20 @@ Realizado por:
 <header> <font color = "red" size="+1" font face = "aharoni">
                 <nav class="navegacion">
                     <ul class="Indice">
-                       <li> <a href="#Descripción del Problemario"> Descripción del Problemario </a> <br> </li>
+                       <li> <a href="#Descripción"> Descripción del Problemario </a> <br> </li>
                             </ul>
      <li> <a href="#Métodos numéricos para encontrar las raíces de ecuaciones que se encuentran en nuestro repositorio"> Metodos de interpolación </a> <br> </li>
                             <ul class="subindice"> 
-                                <li> <a href="#Método de Bisección"> Interpolación lineal (5 ejemplos). </a> </li>
-                                <li> <a href="#Método de la Falsa Posición"> Interpolación cuadratica (1 ejemplo). </a> </li>
-                                <li> <a href="#Método de la Secante"> Interpolación langrage (5 ejemplos). </a> </li> 
-                                <li> <a href="#Método de Newton-Raphson"> Interpolación de newton (5 ejemplos). </a> </li> 
+                                <li> <a href="#Lineal"> Interpolación lineal (5 ejemplos). </a> </li>
+                                <li> <a href="#Cuadratica"> Interpolación cuadratica (1 ejemplo). </a> </li>
+                                <li> <a href="#Langrage"> Interpolación langrage (5 ejemplos). </a> </li> 
+                                <li> <a href="#Newton"> Interpolación de newton (5 ejemplos). </a> </li> 
                             </ul>
                     </ul>
                 </nav>
             </font> </header>
 
-# Descripción
+<a name="Lineal"># Descripción</a>
 En este documento vamos a ver varios ejercicios sobre los distintos metodos de interpolación como lo son:
   <li>1.-Interpolación lineal</li>
   <li>2.-Interpolación cuadratica</li>
@@ -28,7 +28,7 @@ En este documento vamos a ver varios ejercicios sobre los distintos metodos de i
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h2 align = "center"> <font font face = "forte">  1. Interpolación lineal </h2>
+<h2 align = "center"> <font font face = "forte">  <a name="Lineal"> 1. Interpolación lineal </a></h2>
 
 <h3> <font font face = "arial"> DESCRIPCIÓN: </h3>
 
@@ -75,7 +75,7 @@ La interpolación lineal es un procedimiento numérico que permite aproximar val
 
   ![Lineal](https://github.com/Hante990/Interpolaci-n2/assets/107586879/0037a026-e06c-45ce-8827-166931a2d22e)
 
-<h2 align = "center"> <font font face = "forte">  2.- Interpolación cuadratica </h2>
+<h2 align = "center"> <font font face = "forte">  <a name="Cuadratica"> 2.- Interpolación cuadratica </a></h2>
 
 <h3> <font font face = "arial"> DESCRIPCIÓN: </h3>
 
@@ -114,7 +114,7 @@ La interpolación cuadrática es una herramienta útil en la aproximación de fu
     
   ![Cua](https://github.com/Hante990/Interpolaci-n2/assets/107586879/88a62d83-01c4-421a-a441-54eec1a2f964)
 
-<h2 align = "center"> <font font face = "forte">  3.- Interpolación langrage </h2>
+<h2 align = "center"> <font font face = "forte"> <a name="Langrage">  3.- Interpolación langrage </a></h2>
 
 <h3> <font font face = "arial"> DESCRIPCIÓN: </h3>
 
@@ -152,7 +152,7 @@ La interpolación de Lagrange es una técnica fundamental en el campo de los mé
 
 ![langrage](https://github.com/Hante990/Interpolaci-n2/assets/107586879/dd6934bc-7890-444a-b38d-b6dcecd0ac99)
     
-<h2 align = "center"> <font font face = "forte">  4.Interpolación de newton </h2>
+<h2 align = "center"> <font font face = "forte"> <a name="Newton">  4.Interpolación de newton </a></h2>
 
 <h3> <font font face = "arial"> DESCRIPCIÓN: </h3>
 
